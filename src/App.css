@@ -1,5 +1,6 @@
 .container {
-   width: 1024px;
+   max-width: 1024px;
+   min-width: 90%;
    margin: auto;
    display: flex;
    flex-direction: column;
@@ -16,7 +17,7 @@ input {
    padding: 10px 15px;
    border: none;
    background-color: rgb(253, 231, 185);
-   width: 400px;
+   width: 450px;
    font-size: 18px;
    font-family: inherit;
    border-radius: 20px;
@@ -47,13 +48,19 @@ input:focus {
 }
 .line:hover > div:last-child {
    display: inherit;
+   font-weight: 500;
 }
 .line > div:last-child:active {
    display: none;
 }
+.nothing {
+   text-align: center;
+   font-size: 18px;
+   font-weight: 500;
+}
 
 footer {
-   margin-top: 70px;
+   margin: 50px 0;
 }
 footer > div {
    font-size: 12px;
