@@ -7,10 +7,9 @@ const Line = ({ search }) => {
          results.push(data[i]);
       }
    }
-   //    console.log("results: ", results);
 
    if (results.length === 0) {
-      return <div>No emoji found 🙁</div>;
+      return <div className="nothing">No emoji found 🙁</div>;
    } else {
       return results.map((elem, index) => {
          return (
