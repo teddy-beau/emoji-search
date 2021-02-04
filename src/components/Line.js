@@ -1,12 +1,21 @@
 import data from "../emojiList.json";
 
 const Line = ({ search }) => {
-   return data.map((elem, index) => {
-      //   let found = elem.keywords.match(search);
-      //   console.log("found: ", found);
-      if (elem.keywords.match(search)) {
+   const results = [];
+   for (let i = 0; i < data.length; i++) {
+      if (data[i].keywords.match(search)) {
+         results.push(data[i]);
+      }
+   }
+   //    console.log("results: ", results);
+
+   if (results.length === 0) {
+      return <div>No emoji found 🙁</div>;
+   } else {
+      return results.map((elem, index) => {
          return (
             <div
+               key={index}
                className="line"
                onClick={() => {
                   navigator.clipboard.writeText(elem.symbol);
@@ -17,10 +26,8 @@ const Line = ({ search }) => {
                <div>Click to copy!</div>
             </div>
          );
-      }
-   });
+      });
+   }
 };
-
-// return <div>No emoji found 🙁</div>;
 
 export default Line;
