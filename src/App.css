@@ -17,7 +17,7 @@ input {
    padding: 10px 15px;
    border: none;
    background-color: rgb(253, 231, 185);
-   width: 450px;
+   width: 400px;
    font-size: 18px;
    font-family: inherit;
    border-radius: 20px;
@@ -33,6 +33,7 @@ input:focus {
    padding: 10px 15px;
    margin-bottom: 15px;
    display: flex;
+   width: 400px;
 }
 .line > div:first-child {
    margin-right: 15px;
